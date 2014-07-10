@@ -1,0 +1,33 @@
+<h1>Carrier Information</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Error Message</th>
+      <th>Mobile Number</th>
+      <th>MCC</th>
+      <th>Operator</th>
+      <th>Country</th>
+      <th>MNC</th>
+      <th>Error Code</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @check_carrier.each do |check_carrier| %>
+      <tr>
+        <td><%= @check_carrier.errormsg %></td>
+        <td><%= @check_carrier.mn %></td>
+        <td><%= @check_carrier.mcc %></td>
+        <td><%= @check_carrier.operator_name %></td>
+        <td><%= @check_carrier.country_name %></td>
+        <td><%= @check_carrier.mnc %></td>
+        <td><%= @check_carrier.error_code %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unique whiteline', new_unique_whiteline_path %>

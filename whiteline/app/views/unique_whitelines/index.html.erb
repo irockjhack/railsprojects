@@ -1,0 +1,27 @@
+<h1>Listing unique_whitelines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Softbank phone number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unique_whitelines.each do |unique_whiteline| %>
+      <tr>
+        <td><%= unique_whiteline.softbank_phone_number %></td>
+        <td><%= link_to 'Show', unique_whiteline %></td>
+        <td><%= link_to 'Edit', edit_unique_whiteline_path(unique_whiteline) %></td>
+        <td><%= link_to 'Destroy', unique_whiteline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unique whiteline', new_unique_whiteline_path %>

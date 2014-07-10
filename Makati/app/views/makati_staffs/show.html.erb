@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @makati_staff.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @makati_staff.age %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @makati_staff.department %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @makati_staff.gender %>
+</p>
+
+<%= link_to 'Edit', edit_makati_staff_path(@makati_staff) %> |
+<%= link_to 'Back', makati_staffs_path %>

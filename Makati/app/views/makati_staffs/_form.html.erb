@@ -1,0 +1,33 @@
+<%= form_for(@makati_staff) do |f| %>
+  <% if @makati_staff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@makati_staff.errors.count, "error") %> prohibited this makati_staff from being saved:</h2>
+
+      <ul>
+      <% @makati_staff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

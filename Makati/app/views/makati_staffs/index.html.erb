@@ -1,0 +1,31 @@
+<h1>Listing makati_staffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Gender</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @makati_staffs.each do |makati_staff| %>
+      <tr>
+        <td><%= makati_staff.name %></td>
+        <td><%= makati_staff.age %></td>
+        <td><%= makati_staff.department %></td>
+        <td><%= makati_staff.gender %></td>
+        <td><%= link_to 'Show', makati_staff %></td>
+        <td><%= link_to 'Edit', edit_makati_staff_path(makati_staff) %></td>
+        <td><%= link_to 'Destroy', makati_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Makati staff', new_makati_staff_path %>

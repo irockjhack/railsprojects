@@ -1,0 +1,31 @@
+<h1>Listing clark_staffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Birthday</th>
+      <th>Gender</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clark_staffs.each do |clark_staff| %>
+      <tr>
+        <td><%= clark_staff.name %></td>
+        <td><%= clark_staff.department %></td>
+        <td><%= clark_staff.birthday %></td>
+        <td><%= clark_staff.gender %></td>
+        <td><%= link_to 'Show', clark_staff %></td>
+        <td><%= link_to 'Edit', edit_clark_staff_path(clark_staff) %></td>
+        <td><%= link_to 'Destroy', clark_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clark staff', new_clark_staff_path %>

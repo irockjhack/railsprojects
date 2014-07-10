@@ -1,0 +1,21 @@
+<%= form_for(@unique_whiteline) do |f| %>
+  <% if @unique_whiteline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@unique_whiteline.errors.count, "error") %> prohibited this unique_whiteline from being saved:</h2>
+
+      <ul>
+      <% @unique_whiteline.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :softbank_phone_number %><br>
+    <%= f.text_field :softbank_phone_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
